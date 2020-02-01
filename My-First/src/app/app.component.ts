@@ -1,3 +1,4 @@
+import { tabService } from './tab/tab.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My-First';
+
+  constructor(private TabService:tabService){
+    console.log("From AppComponent : ")  
+    console.log(this.TabService.getTabs());
+  }
 }

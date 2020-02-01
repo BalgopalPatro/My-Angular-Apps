@@ -1,0 +1,14 @@
+<h1>{{title | uppercase}}</h1> <!--String Interpolation-->
+<h2>{{tab.name }}</h2> <!---->
+<h3>{{tab.price | currency:"INR"}}</h3>
+<p>Date with out pipe {{tab.date}}</p>
+<p>Date with pipe {{tab.date | date}}</p>
+<!--Property Binding-->
+<img [src] = "imgUrl" alt="image">
+<!--Event binding-->
+<button (click) = "clickEvent(tab)">Click Me</button>
+<!--2 way data binding-->
+<input [(ngModel)] = "tab.name" >
+
+<!-- Structural Directive -->
+<li *ngFor = "let tab of tabs" [ngStyle] = "currentStyle" >{{tab.name}} + {{tab.price}}</li>
